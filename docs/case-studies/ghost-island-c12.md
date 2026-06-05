@@ -99,13 +99,19 @@ This case directly shaped the engine's core principles:
 
 ## Current Campaign Phase
 
-Phase 1 completed:
+Archived origin case:
+
+- The campaign is no longer treated as a fully reliable playable reconstruction.
+- Its primary value is documenting why AI TRPG World Engine was created.
+- Future play should begin from a clean save created under current ATWE rules.
+
+Phase 1 had completed:
 
 - Historical investigation.
 - Maritime archive research.
 - C-12 statistical analysis.
 
-Phase 2 pending:
+Phase 2 was considered but not continued in this save:
 
 - Ghost Island investigation.
 - Correlation analysis.
