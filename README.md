@@ -8,9 +8,10 @@ This repository is designed to preserve persistent, logically consistent TRPG wo
 
 - `rules/`: reusable engine rules and operating principles.
 - `saves/`: story/campaign saves.
-- `saves/active_save.md`: pointer to the currently active save.
+- `saves/active_save.example.md`: example active-save pointer.
+- `saves/active_save.md`: local pointer to the currently active save, ignored by Git.
 - `saves/_template/`: blank save template for new stories.
-- `saves/ghost-island/`: first story save migrated from the original project layout.
+- `saves/<save-name>/`: local story save, ignored by Git by default.
 - `saves/<save-name>/save.md`: metadata for one save, including status.
 - `saves/<save-name>/state/`: current world, player, timeline, and clue state for one save.
 - `saves/<save-name>/npcs/`: one file per NPC in that save.
@@ -32,7 +33,7 @@ Choose one active save from `saves/active_save.md`, then read in this order befo
 
 ## Creating A New Save
 
-Copy `saves/_template/` to `saves/<new-save-name>/`, fill in `saves/<new-save-name>/save.md`, and update `saves/active_save.md`. Do not edit an old completed save unless you are continuing or explicitly revising that story.
+Copy `saves/_template/` to `saves/<new-save-name>/`, copy `saves/active_save.example.md` to `saves/active_save.md`, fill in `saves/<new-save-name>/save.md`, and update `saves/active_save.md`. Real saves are ignored by Git by default so public repositories can share the engine without leaking story state.
 
 ## Maintenance Rules
 

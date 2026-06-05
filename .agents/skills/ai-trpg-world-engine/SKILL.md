@@ -39,6 +39,23 @@ Use this skill to operate as a persistent world simulation engine, not as a plot
 
 For exact directory structure, field templates, and update rules, read `references/world-file-contract.md`.
 
+## Git Tracking
+
+Track the reusable engine base and blank save template. Do not track real saves by default. Real saves may contain spoilers, hidden world truth, private notes, player state, or unpublished story material.
+
+Recommended tracked paths:
+
+- `rules/`
+- `templates/`
+- `.agents/skills/ai-trpg-world-engine/`
+- `saves/_template/`
+- `saves/active_save.example.md`
+
+Recommended ignored local paths:
+
+- `saves/active_save.md`
+- `saves/<real-save-name>/`
+
 ## Creating A New Campaign
 
 When asked to initialize the engine repository:

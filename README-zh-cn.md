@@ -8,9 +8,10 @@
 
 - `rules/`：可复用的世界引擎规则与运行原则。
 - `saves/`：故事或战役存档。
-- `saves/active_save.md`：当前活跃存档指针。
+- `saves/active_save.example.md`：当前活跃存档指针示例。
+- `saves/active_save.md`：本地当前活跃存档指针，默认不进入 Git。
 - `saves/_template/`：新故事使用的空存档模板。
-- `saves/ghost-island/`：从原始项目结构迁移来的第一个故事存档。
+- `saves/<save-name>/`：本地故事存档，默认不进入 Git。
 - `saves/<save-name>/save.md`：某个存档的元数据，包括状态。
 - `saves/<save-name>/state/`：某个存档的世界、玩家、时间线与线索状态。
 - `saves/<save-name>/npcs/`：某个存档中的 NPC 文件，每个 NPC 单独保存。
@@ -33,7 +34,7 @@
 
 ## 创建新存档
 
-复制 `saves/_template/` 为 `saves/<new-save-name>/`，填写 `saves/<new-save-name>/save.md`，并更新 `saves/active_save.md`。旧故事完结后保留其存档，不要继续修改，除非你明确要续写或修订该故事。
+复制 `saves/_template/` 为 `saves/<new-save-name>/`，复制 `saves/active_save.example.md` 为 `saves/active_save.md`，填写 `saves/<new-save-name>/save.md`，并更新 `saves/active_save.md`。真实存档默认被 Git 忽略，这样公开仓库时不会泄露故事状态。
 
 ## 维护规则
 

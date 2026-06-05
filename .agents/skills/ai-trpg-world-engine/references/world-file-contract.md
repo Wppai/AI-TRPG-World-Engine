@@ -7,7 +7,8 @@ campaign-root/
   rules/
     engine_rules.md
   saves/
-    active_save.md
+    active_save.example.md
+    active_save.md        # local, ignored by Git
     _template/
       save.md
       state/
@@ -35,6 +36,8 @@ campaign-root/
 ```
 
 `rules/`, `templates/`, and `.agents/skills/` are the reusable engine base. `saves/<save-name>/` is the story-specific source of truth.
+
+Track `saves/_template/` and `saves/active_save.example.md` in Git. Ignore real saves and `saves/active_save.md` by default because they may contain spoilers, private notes, hidden truth, and player state.
 
 ## active_save.md
 

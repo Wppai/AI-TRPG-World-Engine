@@ -10,3 +10,9 @@ desktop.ini
 
 # Generated exports
 exports/
+
+# Local story saves may contain spoilers, private notes, and player state.
+saves/*
+!saves/_template/
+!saves/_template/**
+!saves/active_save.example.md
