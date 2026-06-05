@@ -20,6 +20,8 @@ campaign-root/
         .gitkeep
       logs/
         session_log.md
+      docs/
+        story_summary_zh-cn.md
     <save-name>/
       save.md
       state/
@@ -31,6 +33,8 @@ campaign-root/
         npc_<name>.md
       logs/
         session_log.md
+      docs/
+        story_summary_zh-cn.md
   templates/
     npc_template.md
 ```
@@ -38,6 +42,8 @@ campaign-root/
 `rules/`, `templates/`, and `.agents/skills/` are the reusable engine base. `saves/<save-name>/` is the story-specific source of truth.
 
 Track `saves/_template/` and `saves/active_save.example.md` in Git. Ignore real saves and `saves/active_save.md` by default because they may contain spoilers, private notes, hidden truth, and player state.
+
+Use English for AI-readable files such as state, timeline, clues, NPCs, and logs. Use Chinese for player-facing summaries such as `docs/story_summary_zh-cn.md` when the user prefers Chinese.
 
 Recommended branch model:
 

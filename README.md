@@ -16,6 +16,7 @@ This repository is designed to preserve persistent, logically consistent TRPG wo
 - `saves/<save-name>/state/`: current world, player, timeline, and clue state for one save.
 - `saves/<save-name>/npcs/`: one file per NPC in that save.
 - `saves/<save-name>/logs/`: session records for that save.
+- `saves/<save-name>/docs/story_summary_zh-cn.md`: player-facing Chinese story summary.
 - `templates/`: reusable templates for new entities.
 
 ## Session Start Order
@@ -62,6 +63,8 @@ Do this only for private repositories or branches you are comfortable exposing.
 - Keep NPC knowledge bounded by each NPC file.
 - Keep clues separated as fact, inference, speculation, or rumor.
 - Record only observed events in the active save's `logs/session_log.md`.
+- Write player-facing story summaries in Chinese.
+- Write AI-readable state, NPC, clue, timeline, and log files in English.
 
 ## Case Study
 

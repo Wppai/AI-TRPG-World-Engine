@@ -34,6 +34,8 @@ Use this skill to operate as a persistent world simulation engine, not as a plot
 - Update the active save's `state/player.md` immediately when player state changes.
 - Update the active save's `state/world_state.md` when the current date, location, weather, global events, active mysteries, or research progress changes.
 - For realistic cosmic horror investigation, prefer natural explanations before unknown causes.
+- Write AI-readable save files in English unless the user explicitly requests otherwise.
+- Write player-facing story summaries in Chinese when the user wants Chinese play support.
 
 ## File Contract
 
@@ -113,5 +115,6 @@ Before ending a session, update:
 - relevant `saves/<save-name>/npcs/*.md`
 - `saves/<save-name>/state/clues.md`
 - `saves/<save-name>/logs/session_log.md`
+- `saves/<save-name>/docs/story_summary_zh-cn.md` when the player-facing premise changes
 
 If memory-write is available, record only durable meta-context such as the campaign root, preferred workflow, and next-session handoff. Do not duplicate secret world truth into generic memory.

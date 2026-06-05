@@ -16,6 +16,7 @@
 - `saves/<save-name>/state/`：某个存档的世界、玩家、时间线与线索状态。
 - `saves/<save-name>/npcs/`：某个存档中的 NPC 文件，每个 NPC 单独保存。
 - `saves/<save-name>/logs/`：某个存档的会话日志。
+- `saves/<save-name>/docs/story_summary_zh-cn.md`：给玩家阅读的中文剧情摘要。
 - `templates/`：新建 NPC 或其他实体时使用的模板。
 - `.agents/skills/ai-trpg-world-engine/`：用于 Codex 的 AI TRPG 世界引擎 Skill。
 
@@ -63,6 +64,8 @@ git commit -m "Add <save-name> story save"
 - NPC 的行为只能依据其文件中记录的目标、动机和已知信息。
 - 线索必须区分事实、推论、猜测和传闻。
 - 当前存档的 `logs/session_log.md` 只记录发生了什么，不记录隐藏真相或 GM 信息。
+- 面向玩家阅读的剧情摘要使用中文。
+- 面向 AI 读取的状态、NPC、线索、时间线、日志文件使用英文。
 
 ## 案例研究
 
