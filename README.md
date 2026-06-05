@@ -35,6 +35,25 @@ Choose one active save from `saves/active_save.md`, then read in this order befo
 
 Copy `saves/_template/` to `saves/<new-save-name>/`, copy `saves/active_save.example.md` to `saves/active_save.md`, fill in `saves/<new-save-name>/save.md`, and update `saves/active_save.md`. Real saves are ignored by Git by default so public repositories can share the engine without leaking story state.
 
+Recommended branch workflow:
+
+```powershell
+git checkout main
+git pull
+git checkout -b story/<new-save-name>
+```
+
+Keep `main` as the reusable engine base. Use `story/<save-name>` branches for running or experimenting with individual stories. Because real saves are ignored by Git, they stay local unless you explicitly force-add them for a private branch or private remote.
+
+To version a save intentionally:
+
+```powershell
+git add -f saves/active_save.md saves/<save-name>/
+git commit -m "Add <save-name> story save"
+```
+
+Do this only for private repositories or branches you are comfortable exposing.
+
 ## Maintenance Rules
 
 - Append to the active save's `state/timeline.md`; do not rewrite history.

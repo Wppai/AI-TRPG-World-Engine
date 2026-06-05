@@ -36,6 +36,25 @@
 
 复制 `saves/_template/` 为 `saves/<new-save-name>/`，复制 `saves/active_save.example.md` 为 `saves/active_save.md`，填写 `saves/<new-save-name>/save.md`，并更新 `saves/active_save.md`。真实存档默认被 Git 忽略，这样公开仓库时不会泄露故事状态。
 
+推荐分支流程：
+
+```powershell
+git checkout main
+git pull
+git checkout -b story/<new-save-name>
+```
+
+保持 `main` 作为可复用的引擎底座。每个故事或实验使用自己的 `story/<save-name>` 分支。由于真实存档默认被 Git 忽略，除非你明确强制加入，否则它们只保留在本地。
+
+如果你确实想版本化某个存档：
+
+```powershell
+git add -f saves/active_save.md saves/<save-name>/
+git commit -m "Add <save-name> story save"
+```
+
+只建议在私有仓库、私有远端或你愿意公开内容的分支上这样做。
+
 ## 维护规则
 
 - 当前存档的 `state/timeline.md` 只能追加，不要重写历史。

@@ -43,6 +43,16 @@ For exact directory structure, field templates, and update rules, read `referenc
 
 Track the reusable engine base and blank save template. Do not track real saves by default. Real saves may contain spoilers, hidden world truth, private notes, player state, or unpublished story material.
 
+Keep `main` as the reusable engine base. For each new story, start from a fresh branch:
+
+```powershell
+git checkout main
+git pull
+git checkout -b story/<save-name>
+```
+
+Use `story/<save-name>` branches for play, experiments, or story-specific changes. Real saves remain ignored unless the user explicitly wants to version them.
+
 Recommended tracked paths:
 
 - `rules/`
@@ -55,6 +65,12 @@ Recommended ignored local paths:
 
 - `saves/active_save.md`
 - `saves/<real-save-name>/`
+
+If the user explicitly wants to version a save, warn that it may expose spoilers and private state, then force-add only on an appropriate private branch or private remote:
+
+```powershell
+git add -f saves/active_save.md saves/<save-name>/
+```
 
 ## Creating A New Campaign
 

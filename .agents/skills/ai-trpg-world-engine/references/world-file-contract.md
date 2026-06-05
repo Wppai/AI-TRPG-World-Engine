@@ -39,6 +39,13 @@ campaign-root/
 
 Track `saves/_template/` and `saves/active_save.example.md` in Git. Ignore real saves and `saves/active_save.md` by default because they may contain spoilers, private notes, hidden truth, and player state.
 
+Recommended branch model:
+
+- `main`: reusable engine base, templates, Skill, documentation.
+- `story/<save-name>`: one story, campaign, experiment, or local play branch.
+
+Create story branches from current `main`. Do not merge story-specific hidden state back into `main` unless the user explicitly wants to publish it.
+
 ## active_save.md
 
 Track which save is currently in use:
