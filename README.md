@@ -32,3 +32,7 @@ Read in this order before continuing play:
 - Keep NPC knowledge bounded by each NPC file.
 - Keep clues separated as fact, inference, speculation, or rumor.
 - Record only observed events in `logs/session_log.md`.
+
+## Citation
+
+If you use this project in research, writing, derivative tools, or public non-commercial work, please cite it using `CITATION.cff`.

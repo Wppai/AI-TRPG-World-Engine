@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this project, please cite it using the metadata from this file."
+title: "AI TRPG World Engine"
+type: software
+authors:
+  - name: "Wppai"
+date-released: 2026-06-05
+abstract: "A source-available, non-commercial AI TRPG world simulation and state management system for persistent worlds, NPC-bounded knowledge, clue tracking, append-only timelines, and session logs."
+license: "Non-Commercial Source-Available License"
+repository-code: "https://github.com/Wppai/AI-TRPG-World-Engine"
+keywords:
+  - ai
+  - trpg
+  - world-simulation
+  - persistent-memory
+  - npc-memory
+  - tabletop-rpg
