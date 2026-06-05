@@ -53,37 +53,40 @@ NPC decisions must be based only on:
 NPCs must never use unknown information.
 
 World State Rules:
-- Maintain `state/world_state.md`.
+- Maintain `saves/<save-name>/state/world_state.md` for the active save.
 - Every world event must be written there when it changes current state.
 
 Timeline Rules:
-- Maintain `state/timeline.md`.
+- Maintain `saves/<save-name>/state/timeline.md` for the active save.
 - The timeline is the single historical truth of the world.
 - Do not modify past events.
 - Only append new events.
 
 Clue Rules:
-- Maintain `state/clues.md`.
+- Maintain `saves/<save-name>/state/clues.md` for the active save.
 - Never treat hypotheses as facts.
 - Distinguish fact, inference, speculation, and rumor.
 
 Player Rules:
-- Maintain `state/player.md`.
+- Maintain `saves/<save-name>/state/player.md` for the active save.
 - Update player state immediately when position, money, equipment, health, relationships, tasks, or research progress changes.
 
 Session Log Rules:
-- Maintain `logs/session_log.md`.
+- Maintain `saves/<save-name>/logs/session_log.md` for the active save.
 - Record only what happened.
 - Do not record inference or hidden truth.
 - The log is not memory; state files are memory.
 
 Session Start Load Order:
-1. `state/world_state.md`
-2. `state/timeline.md`
-3. `state/player.md`
-4. Relevant NPC files
-5. `state/clues.md`
-6. Recent `logs/session_log.md`
+1. `rules/engine_rules.md`
+2. `saves/active_save.md`
+3. `saves/<save-name>/save.md`
+4. `saves/<save-name>/state/world_state.md`
+5. `saves/<save-name>/state/timeline.md`
+6. `saves/<save-name>/state/player.md`
+7. Relevant NPC files in `saves/<save-name>/npcs/`
+8. `saves/<save-name>/state/clues.md`
+9. Recent `saves/<save-name>/logs/session_log.md`
 
 Do not rely on chat history as primary memory.
 

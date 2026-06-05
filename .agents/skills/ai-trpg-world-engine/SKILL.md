@@ -9,17 +9,20 @@ Use this skill to operate as a persistent world simulation engine, not as a plot
 
 ## Start Workflow
 
-1. Locate the campaign root. Prefer the current repository if it contains `state/`, `npcs/`, `logs/`, or `rules/`.
-2. Read in this order:
+1. Locate the engine root. Prefer the current repository if it contains `rules/`, `saves/`, `templates/`, or `.agents/skills/ai-trpg-world-engine/`.
+2. Choose the active save from `saves/active_save.md`. If no save exists, create one from `saves/_template/`.
+3. Read in this order:
    - `rules/engine_rules.md`
-   - `state/world_state.md`
-   - `state/timeline.md`
-   - `state/player.md`
-   - relevant files in `npcs/`
-   - `state/clues.md`
-   - recent entries in `logs/session_log.md`
-3. If OpenSite memory skills are installed, use memory recall only as supplemental context. Do not let generic memory override campaign state files.
-4. Continue play or maintenance from the files, not from assumptions.
+   - `saves/active_save.md`
+   - `saves/<save-name>/save.md`
+   - `saves/<save-name>/state/world_state.md`
+   - `saves/<save-name>/state/timeline.md`
+   - `saves/<save-name>/state/player.md`
+   - relevant files in `saves/<save-name>/npcs/`
+   - `saves/<save-name>/state/clues.md`
+   - recent entries in `saves/<save-name>/logs/session_log.md`
+4. If OpenSite memory skills are installed, use memory recall only as supplemental context. Do not let generic memory override save state files.
+5. Continue play or maintenance from the files, not from assumptions.
 
 ## Operating Rules
 
@@ -28,8 +31,8 @@ Use this skill to operate as a persistent world simulation engine, not as a plot
 - Never reveal hidden truths, NPC inner thoughts, or undiscovered information through narration.
 - Distinguish fact, inference, speculation, and rumor in clues.
 - Append to timelines and logs; do not rewrite history unless the user explicitly requests a retcon.
-- Update `state/player.md` immediately when player state changes.
-- Update `state/world_state.md` when the current date, location, weather, global events, active mysteries, or research progress changes.
+- Update the active save's `state/player.md` immediately when player state changes.
+- Update the active save's `state/world_state.md` when the current date, location, weather, global events, active mysteries, or research progress changes.
 - For realistic cosmic horror investigation, prefer natural explanations before unknown causes.
 
 ## File Contract
@@ -38,13 +41,28 @@ For exact directory structure, field templates, and update rules, read `referenc
 
 ## Creating A New Campaign
 
-When asked to initialize a campaign:
+When asked to initialize the engine repository:
 
-1. Create directories: `rules/`, `state/`, `npcs/`, `logs/`, `templates/`.
-2. Create the core files from the contract.
+1. Create directories: `rules/`, `saves/_template/`, `templates/`.
+2. Create reusable engine files and the blank save template from the contract.
 3. Add a README that explains the session start order.
 4. Initialize git if the user wants version control.
 5. Make the first commit only after confirming the files are complete.
+
+When asked to create a new story or save:
+
+1. Copy `saves/_template/` to `saves/<new-save-name>/`.
+2. Fill in `saves/<new-save-name>/save.md`.
+3. Update `saves/active_save.md` to point to the new save.
+4. Initialize story-specific world, player, clue, log, and NPC files inside that save.
+5. Keep completed stories intact unless the user explicitly asks to continue or revise them.
+
+When a story is completed:
+
+1. Set `saves/<save-name>/save.md` status to `Completed`.
+2. Fill the `Completed` date.
+3. Leave the save in place as an archive.
+4. Create a new save from `saves/_template/` for the next story instead of overwriting the completed one.
 
 ## During Play
 
@@ -54,11 +72,13 @@ Respond only with what the player can observe, investigate, or be told. Keep hid
 
 Before ending a session, update:
 
-- `state/world_state.md`
-- `state/timeline.md`
-- `state/player.md`
-- relevant `npcs/*.md`
-- `state/clues.md`
-- `logs/session_log.md`
+- `saves/active_save.md` if the active save changes
+- `saves/<save-name>/save.md` if status changes
+- `saves/<save-name>/state/world_state.md`
+- `saves/<save-name>/state/timeline.md`
+- `saves/<save-name>/state/player.md`
+- relevant `saves/<save-name>/npcs/*.md`
+- `saves/<save-name>/state/clues.md`
+- `saves/<save-name>/logs/session_log.md`
 
 If memory-write is available, record only durable meta-context such as the campaign root, preferred workflow, and next-session handoff. Do not duplicate secret world truth into generic memory.

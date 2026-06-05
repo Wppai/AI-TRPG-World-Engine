@@ -6,18 +6,76 @@
 campaign-root/
   rules/
     engine_rules.md
-  state/
-    world_state.md
-    timeline.md
-    player.md
-    clues.md
-  npcs/
-    npc_<name>.md
-  logs/
-    session_log.md
+  saves/
+    active_save.md
+    _template/
+      save.md
+      state/
+        world_state.md
+        timeline.md
+        player.md
+        clues.md
+      npcs/
+        .gitkeep
+      logs/
+        session_log.md
+    <save-name>/
+      save.md
+      state/
+        world_state.md
+        timeline.md
+        player.md
+        clues.md
+      npcs/
+        npc_<name>.md
+      logs/
+        session_log.md
   templates/
     npc_template.md
 ```
+
+`rules/`, `templates/`, and `.agents/skills/` are the reusable engine base. `saves/<save-name>/` is the story-specific source of truth.
+
+## active_save.md
+
+Track which save is currently in use:
+
+```markdown
+# Active Save
+
+Current Save:
+ghost-island
+
+Notes:
+- Change `Current Save` when starting or resuming a different story.
+- Do not point this to `_template`.
+```
+
+## save.md
+
+Each save must include metadata:
+
+```markdown
+# Save Metadata
+
+Name:
+
+Slug:
+
+Status:
+Draft | Active | Completed | Archived
+
+Created:
+
+Completed:
+
+Description:
+
+Notes:
+- 
+```
+
+When a story ends, set `Status: Completed`, fill `Completed`, and leave the save intact.
 
 ## world_state.md
 

@@ -2,36 +2,46 @@
 
 Long-running AI TRPG world simulation and state management system.
 
-This repository is designed to preserve a persistent, logically consistent TRPG world. The files in this repository are the source of truth for the simulation. Chat history is only auxiliary context.
+This repository is designed to preserve persistent, logically consistent TRPG worlds. The engine files define the reusable operating rules, while each save under `saves/` contains the source of truth for one story or campaign. Chat history is only auxiliary context.
 
 ## Directory Structure
 
-- `rules/`: engine rules and operating principles.
-- `state/`: current world, player, timeline, and clue state.
-- `npcs/`: one file per NPC.
-- `logs/`: session records of what happened in play.
+- `rules/`: reusable engine rules and operating principles.
+- `saves/`: story/campaign saves.
+- `saves/active_save.md`: pointer to the currently active save.
+- `saves/_template/`: blank save template for new stories.
+- `saves/ghost-island/`: first story save migrated from the original project layout.
+- `saves/<save-name>/save.md`: metadata for one save, including status.
+- `saves/<save-name>/state/`: current world, player, timeline, and clue state for one save.
+- `saves/<save-name>/npcs/`: one file per NPC in that save.
+- `saves/<save-name>/logs/`: session records for that save.
 - `templates/`: reusable templates for new entities.
 
 ## Session Start Order
 
-Read in this order before continuing play:
+Choose one active save from `saves/active_save.md`, then read in this order before continuing play:
 
 1. `rules/engine_rules.md`
-2. `state/world_state.md`
-3. `state/timeline.md`
-4. `state/player.md`
-5. Relevant files in `npcs/`
-6. `state/clues.md`
-7. Recent entries in `logs/session_log.md`
+2. `saves/<save-name>/save.md`
+3. `saves/<save-name>/state/world_state.md`
+4. `saves/<save-name>/state/timeline.md`
+5. `saves/<save-name>/state/player.md`
+6. Relevant files in `saves/<save-name>/npcs/`
+7. `saves/<save-name>/state/clues.md`
+8. Recent entries in `saves/<save-name>/logs/session_log.md`
+
+## Creating A New Save
+
+Copy `saves/_template/` to `saves/<new-save-name>/`, fill in `saves/<new-save-name>/save.md`, and update `saves/active_save.md`. Do not edit an old completed save unless you are continuing or explicitly revising that story.
 
 ## Maintenance Rules
 
-- Append to `state/timeline.md`; do not rewrite history.
-- Update `state/world_state.md` when the current world changes.
-- Update `state/player.md` whenever player state changes.
+- Append to the active save's `state/timeline.md`; do not rewrite history.
+- Update the active save's `state/world_state.md` when the current world changes.
+- Update the active save's `state/player.md` whenever player state changes.
 - Keep NPC knowledge bounded by each NPC file.
 - Keep clues separated as fact, inference, speculation, or rumor.
-- Record only observed events in `logs/session_log.md`.
+- Record only observed events in the active save's `logs/session_log.md`.
 
 ## Citation
 
