@@ -1,0 +1,12 @@
+# OS/editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local scratch files
+*.tmp
+*.bak
+*.swp
+
+# Generated exports
+exports/
