@@ -1,6 +1,6 @@
-# The Ghost Iland
+# AI TRPG World Engine
 
-Long-running AI TRPG world state repository.
+Long-running AI TRPG world simulation and state management system.
 
 This repository is designed to preserve a persistent, logically consistent TRPG world. The files in this repository are the source of truth for the simulation. Chat history is only auxiliary context.
 
