@@ -63,6 +63,12 @@ Do this only for private repositories or branches you are comfortable exposing.
 - Keep clues separated as fact, inference, speculation, or rumor.
 - Record only observed events in the active save's `logs/session_log.md`.
 
+## Case Study
+
+This project originated from a real long-running AI TRPG campaign where an important NPC gradually drifted away from his original identity and motivation as the chat context grew.
+
+See [Ghost Island C-12 Investigation](docs/case-studies/ghost-island-c12.md) for the first reference case and the design lesson behind the engine.
+
 ## Citation
 
 If you use this project in research, writing, derivative tools, or public non-commercial work, please cite it using `CITATION.cff`.

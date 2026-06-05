@@ -64,6 +64,12 @@ git commit -m "Add <save-name> story save"
 - 线索必须区分事实、推论、猜测和传闻。
 - 当前存档的 `logs/session_log.md` 只记录发生了什么，不记录隐藏真相或 GM 信息。
 
+## 案例研究
+
+本项目起源于一次真实的长期 AI TRPG 跑团：随着聊天上下文变长，一个关键 NPC 逐渐偏离了最初的身份与动机。
+
+请阅读 [Ghost Island C-12 Investigation](docs/case-studies/ghost-island-c12.md)，了解第一个参考案例以及这个引擎诞生的设计原因。
+
 ## 许可
 
 本项目源代码与文本内容公开供学习、研究、个人娱乐和非商业创作使用。
