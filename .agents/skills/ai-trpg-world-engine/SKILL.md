@@ -5,6 +5,8 @@ description: Create, continue, audit, or maintain long-running AI TRPG worlds wi
 
 # AI TRPG World Engine
 
+Version: v1.1
+
 Use this skill to operate as a persistent world simulation engine, not as a plot-first storyteller. The state files are the source of truth. Chat history is only auxiliary context.
 
 ## Start Workflow
@@ -36,6 +38,32 @@ Use this skill to operate as a persistent world simulation engine, not as a plot
 - For realistic cosmic horror investigation, prefer natural explanations before unknown causes.
 - Write AI-readable save files in English unless the user explicitly requests otherwise.
 - Write player-facing story summaries in Chinese when the user wants Chinese play support.
+
+## Operation Modes
+
+Use FULL Mode when:
+
+- A model or tool first takes over an existing save.
+- Continuity needs to be audited.
+- State drift or contradiction needs repair.
+- The user explicitly asks for a full reload.
+
+FULL Mode reads the active save broadly: `save.md`, `rules.md`, `state/world_state.md`, `state/player.md`, `state/timeline.md`, `state/clues.md`, relevant or all NPC files as needed, and recent `logs/session_log.md`.
+
+Use LITE Mode during ordinary play:
+
+- Start from `saves/context_manifest.md`.
+- Read only current-scene files.
+- Read NPC files only for NPCs present in the scene.
+- Read only relevant clue sections.
+- Avoid writing Markdown every turn.
+
+Use Lite Day-Cycle by default:
+
+1. During one in-game day, run in LITE Mode.
+2. At day end, fully update the active save and `saves/context_manifest.md`.
+3. At the next in-game day start, reload active save core files.
+4. Return to LITE Mode for play.
 
 ## File Contract
 

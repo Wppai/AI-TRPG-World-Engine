@@ -1,5 +1,7 @@
 # AI TRPG World Engine
 
+Version: v1.1
+
 Long-running AI TRPG world simulation and state management system.
 
 This repository is designed to preserve persistent, logically consistent TRPG worlds. The engine files define the reusable operating rules, while each save under `saves/` contains the source of truth for one story or campaign. Chat history is only auxiliary context.
@@ -65,6 +67,22 @@ Do this only for private repositories or branches you are comfortable exposing.
 - Record only observed events in the active save's `logs/session_log.md`.
 - Write player-facing story summaries in Chinese.
 - Write AI-readable state, NPC, clue, timeline, and log files in English.
+
+## Operation Modes
+
+ATWE v1.1 supports two operating modes.
+
+**FULL Mode**
+
+Use FULL Mode when a model or tool first takes over a save, when auditing continuity, or when repairing state drift. Read the active save broadly: metadata, world state, player state, timeline, clues, relevant NPC files, and recent session logs.
+
+**LITE Mode**
+
+Use LITE Mode during ordinary play to reduce token usage. Read only the current scene, present NPCs, relevant clues, and the latest context manifest. Keep routine conversation in working context and avoid writing Markdown every turn.
+
+**Lite Day-Cycle**
+
+During a game day, run in LITE Mode. At the end of each in-game day, fully update the active save and `saves/context_manifest.md`. At the start of the next in-game day, reload the active save core files, then return to LITE Mode.
 
 ## Case Study
 
