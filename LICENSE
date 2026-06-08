@@ -1,55 +1,21 @@
-Non-Commercial Source-Available License
+MIT License
 
-Copyright (c) 2026 AI TRPG World Engine contributors
+Copyright (c) 2026 Wang Ziheng
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
-of this repository and associated documentation files (the "Project"), to use,
-copy, modify, merge, publish, and distribute copies of the Project for
-personal, educational, research, archival, and other non-commercial purposes,
-subject to the following conditions:
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-1. Non-Commercial Use Only
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-The Project may not be used, directly or indirectly, for commercial purposes
-without prior written permission from the copyright holder.
-
-Commercial purposes include, but are not limited to:
-- selling the Project or modified versions of it;
-- using the Project in a paid product, paid service, subscription service, or
-  commercial SaaS offering;
-- using the Project to provide paid consulting, training, entertainment,
-  publishing, or content-generation services;
-- integrating the Project into commercial software, games, tools, datasets,
-  marketplaces, or asset packs;
-- commercial redistribution, sublicensing, or resale.
-
-2. Attribution
-
-Copies or substantial portions of the Project must include this license notice
-and a reasonable attribution to the original Project.
-
-3. Modifications
-
-Modified versions may be created and shared for non-commercial purposes only.
-Modified versions must preserve this license or use another license with equal
-or stronger non-commercial restrictions.
-
-4. No Trademark Rights
-
-This license does not grant permission to use project names, logos, trademarks,
-or branding except as required for reasonable attribution.
-
-5. No Warranty
-
-THE PROJECT IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM,
-OUT OF, OR IN CONNECTION WITH THE PROJECT OR THE USE OR OTHER DEALINGS IN THE
-PROJECT.
-
-6. Commercial Permission
-
-For commercial licensing, contact the copyright holder and obtain explicit
-written permission before any commercial use.
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
